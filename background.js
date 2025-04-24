@@ -32,9 +32,9 @@ async function openInBatches(recoveredUrls) {
     let notOpened = recoveredUrls.map(normalize).filter(url => !openUrlsSet.has(url));
     let currentWindowId = null;
 
-    console.log("✅ Total recovered:", recoveredUrls.length);
-    console.log("✅ Open already:", recoveredUrls.length - notOpened.length);
-    console.log("❌ Still unopened:", notOpened.length);
+    console.log("Total recovered:", recoveredUrls.length);
+    console.log("Open already:", recoveredUrls.length - notOpened.length);
+    console.log("Still unopened:", notOpened.length);
 
     for (let i = 0; i < notOpened.length; i++) {
       if (i % tabsPerWindow === 0) {
